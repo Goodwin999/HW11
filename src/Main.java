@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
 
     }
 
@@ -21,4 +22,27 @@ public class Main {
         checkForLeapYear(year);
 
     }
+
+    public static void determineOperatingSystem(int clientOs, int clientYear) {
+        if (clientOs == 0 && clientYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке ");
+        } else if (clientYear >= 2015 && clientOs == 0) {
+            System.out.println("Установите приложение для iOS по ссылке ");
+        } else if (clientOs == 1 && clientYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке» ");
+        } else if (clientYear >= 2015 && clientOs == 1) {
+            System.out.println("Установите приложение для Android ");
+        } else {
+            System.out.println("Купите телефон ");
+        }
+    }
+
+    public static void task2() {
+        System.out.println("Task2");
+        int clientOs = 0;
+        int clientYear = 2015;
+        determineOperatingSystem(clientOs, clientYear);
+    }
+
+
 }
