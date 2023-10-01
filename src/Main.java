@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
 
     }
 
@@ -42,6 +43,26 @@ public class Main {
         int clientOs = 0;
         int clientYear = 2015;
         determineOperatingSystem(clientOs, clientYear);
+    }
+
+    public static int determineDeliveryTime(int deliveryDistance1) {
+
+        if (deliveryDistance1 < 20) {
+            System.out.println("Потребуется одни сутки ");
+        } else if (deliveryDistance1 > 20 && deliveryDistance1 < 60) {
+            System.out.println("Потребуется двое суток");
+        } else if (deliveryDistance1 > 60 && deliveryDistance1 < 100) {
+            System.out.println("Потребуется трое суток");
+        } else {
+            System.out.println("Доставки нет");
+        }
+        return deliveryDistance1;
+    }
+
+    public static void task3() {
+        System.out.println("Task3");
+        int deliveryDistance = 95;
+        determineDeliveryTime(deliveryDistance);
     }
 
 
