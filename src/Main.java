@@ -47,22 +47,25 @@ public class Main {
 
     public static int determineDeliveryTime(int deliveryDistance1) {
 
+        int deliveryDay = -1;
         if (deliveryDistance1 < 20) {
-            System.out.println("Потребуется одни сутки ");
+deliveryDay = 1;
         } else if (deliveryDistance1 > 20 && deliveryDistance1 < 60) {
-            System.out.println("Потребуется двое суток");
+deliveryDay = 2;
         } else if (deliveryDistance1 > 60 && deliveryDistance1 < 100) {
-            System.out.println("Потребуется трое суток");
-        } else {
-            System.out.println("Доставки нет");
+deliveryDay = 3;
         }
-        return deliveryDistance1;
+        return deliveryDay;
     }
 
     public static void task3() {
         System.out.println("Task3");
-        int deliveryDistance = 95;
-        determineDeliveryTime(deliveryDistance);
+        int days = determineDeliveryTime(1);
+        if (days > 0) {
+            System.out.println("Потребуется дней " + days);
+        } else {
+            System.out.println("Доставка невозможна");
+        }
     }
 
 
